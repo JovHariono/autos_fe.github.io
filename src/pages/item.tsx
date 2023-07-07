@@ -147,8 +147,8 @@ const Item: React.FunctionComponent<IItemProps> = (props) => {
       >
         {products.length == 0 ? (<div></div>) : (products.map((product, index) => {
           return (
-            <SwiperSlide>
-            <Link key={index} href="/detailpost" className="containerListMobil">
+            <SwiperSlide key={index}>
+            <Link href="/detailpost" className="containerListMobil">
               <div className="containerIMobil">
                 <div className="containerImageIMobil">
                   <Image src={product.image} alt="Unknown" width={10} height={10} />
