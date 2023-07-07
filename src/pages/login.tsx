@@ -26,10 +26,11 @@ const Login: React.FunctionComponent<ILoginProps> = (props) => {
   const onSubmit = (data: typeLogin) => {
     console.log("Form Submitted", data);
 
-    //admin pass: 123
+    //pass admin: 123
+
     axios
       .post(
-        "http://localhost:8001/auth/login",
+        "http://188.166.238.35:8001/auth/login",
         {
           email,
           password,
