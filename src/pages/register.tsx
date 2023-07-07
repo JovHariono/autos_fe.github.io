@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
+import Link from "next/link";
 
 type regValues = {
   email: string;
@@ -32,19 +33,19 @@ const Login: React.FunctionComponent = () => {
     if (email && errors.email?.message) {
       errors.email.message = "";
     }
-  }, [email]);
+  }, [email, errors.email]);
 
   useEffect(() => {
     if (username && errors.username?.message) {
       errors.username.message = "";
     }
-  }, [username]);
+  }, [username, errors.username]);
 
   useEffect(() => {
     if (password && errors.password?.message) {
       errors.password.message = "";
     }
-  }, [password]);
+  }, [password, errors.password]);
 
   const regSubmit = (data: regValues) => {
     console.log("Form submitted", data);
@@ -209,9 +210,9 @@ const Login: React.FunctionComponent = () => {
           </div>
           <div className="subHeader3LoginRegister">
             Already have an account?
-            <a href="/login">
+            <Link href="/login">
               <strong>Log in</strong>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

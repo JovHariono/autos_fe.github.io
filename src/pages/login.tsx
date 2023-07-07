@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 import ImageLoginRegister from "../../public/assets/LoginRegister.png";
+import Link from "next/link";
 
 type typeLogin = {
   email: string;
@@ -108,10 +109,10 @@ const Login: React.FunctionComponent<ILoginProps> = (props) => {
             </form>
           </div>
           <div className="subHeader3LoginRegister">
-            Don't have an Account?
-            <a href="/register">
+            Do not have an Account?
+            <Link href="/register">
               <strong>Register</strong>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

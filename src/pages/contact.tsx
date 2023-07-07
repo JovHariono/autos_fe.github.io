@@ -30,8 +30,8 @@ const contact: React.FunctionComponent<IcontactProps> = (props) => {
   return (
     <div className="container">
       <div className="containerHalamanContact">
-        {Contacts.map((contact) => {
-          return <Contact gambar={contact.gambar} detail={contact.detail} />;
+        {Contacts.map((contact, index) => {
+          return <Contact key={index} gambar={contact.gambar} detail={contact.detail} />;
         })}
       </div>
     </div>

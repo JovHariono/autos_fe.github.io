@@ -145,10 +145,10 @@ const Item: React.FunctionComponent<IItemProps> = (props) => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        {products.length == 0 ? (<div></div>) : (products.map((product) => {
+        {products.length == 0 ? (<div></div>) : (products.map((product, index) => {
           return (
             <SwiperSlide>
-            <Link href="/detailpost" className="containerListMobil">
+            <Link key={index} href="/detailpost" className="containerListMobil">
               <div className="containerIMobil">
                 <div className="containerImageIMobil">
                   <Image src={product.image} alt="Unknown" width={10} height={10} />
